@@ -2,7 +2,7 @@
 import { computed, get } from "@ember/object";
 import Service from "@ember/service";
 import config from "../config/environment";
-import RSVP from "rsvp";
+// import RSVP from "rsvp";
 import { isPresent } from "@ember/utils";
 
 const AUTH_CONFIG = config.auth0;
@@ -24,19 +24,19 @@ export default Service.extend({
   },
 
   handleAuthentication() {
-    return new RSVP.Promise((resolve, reject) => {
-      // https://github.com/auth0-community/ember-simple-auth-auth0/issues/67#issuecomment-312563014
-      // get(this, "auth0").parseHash((err, authResult) => {
-      get(this, "auth0").parseHash(window.location.hash, (err, authResult) => {
-        if (authResult && authResult.accessToken && authResult.idToken) {
-          this.setSession(authResult);
-        } else if (err) {
-          return reject(err);
-        }
+    // return new RSVP.Promise((resolve, reject) => {
+    //   // https://github.com/auth0-community/ember-simple-auth-auth0/issues/67#issuecomment-312563014
+    //   // get(this, "auth0").parseHash((err, authResult) => {
+    //   get(this, "auth0").parseHash(window.location.hash, (err, authResult) => {
+    //     if (authResult && authResult.accessToken && authResult.idToken) {
+    //       this.setSession(authResult);
+    //     } else if (err) {
+    //       return reject(err);
+    //     }
 
-        return resolve();
-      });
-    });
+    //     return resolve();
+    //   });
+    // });
   },
 
   isAuthenticated: computed(function() {
