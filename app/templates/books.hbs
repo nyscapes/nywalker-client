@@ -2,7 +2,7 @@
 
 <ul>
   {{#each model as |book|}}
-  <li>{{book}}</li>
+  <li class="book">{{book.author}}, <em>{{book.title}}</em> ({{book.year}})</li>
   {{/each}}
 </ul>
 
