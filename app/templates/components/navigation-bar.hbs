@@ -1,6 +1,13 @@
-{{#link-to "about" class="button"}}
-About
-{{/link-to}}
-&nbsp;
-<button {{ action "login" }}>Login</button>
+{{#bs-navbar type=(if inverse 'inverse') fluid=fluid collapsed=collapsed onCollapse=(action (mut collapsed) true) onExpand=(action (mut collapsed) false) as |navbar|}}
+  <div class="navbar-header">
+    {{navbar.toggle}}
+    {{#link-to "index" class="navbar-brand"}}NYWalker{{/link-to}}
+  </div>
+  {{#navbar.content}}
+    {{#navbar.nav as |nav|}}
+      {{#nav.item}}{{#nav.link-to "about"}}About{{/nav.link-to}}{{/nav.item}}
+      {{#nav.item}}Login{{/nav.item}}
+    {{/navbar.nav}}
+  {{/navbar.content}}
+{{/bs-navbar}}
 
