@@ -9,6 +9,7 @@
 /bower_components
 
 # misc
+config/auth0-variables.js
 /.sass-cache
 /connect.lock
 /coverage/*
