@@ -45,6 +45,7 @@ export default Service.extend({
   
   getSession() {
     return {
+      user: localStorage.getItem("user"),
       access_token: localStorage.getItem("access_token"),
       id_token: localStorage.getItem("id_token"),
       expires_at: localStorage.getItem("expires_at")
@@ -55,6 +56,11 @@ export default Service.extend({
     if (authResult && authResult.accessToken && authResult.idToken) {
       // Set the time that the access token will expire at
       let expiresAt = JSON.stringify((authResult.expiresIn * 1000) + new Date().getTime());
+      get(this, "auth0").client.userInfo(authResult.accessToken, function(err, user) {
+        // This creates something like {"sub":"github|userid"}, the use of
+        // which is opaque at the moment.
+        localStorage.setItem("user", JSON.stringify(user));
+      });
       localStorage.setItem("access_token", authResult.accessToken);
       localStorage.setItem("id_token", authResult.idToken);
       localStorage.setItem("expires_at", expiresAt);
@@ -66,6 +72,7 @@ export default Service.extend({
     localStorage.removeItem("access_token");
     localStorage.removeItem("id_token");
     localStorage.removeItem("expires_at");
+    localStorage.removeItem("user");
   },
 
   isNotExpired() {
