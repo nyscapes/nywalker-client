@@ -1,8 +1,9 @@
-/* global auth0, RSVP, isPresent */
-// import Ember from "ember";
+/* global auth0 */
 import { computed, get } from "@ember/object";
 import Service from "@ember/service";
 import config from "../config/environment";
+import RSVP from "rsvp";
+import { isPresent } from "@ember/utils";
 
 const AUTH_CONFIG = config.auth0;
 
@@ -24,7 +25,9 @@ export default Service.extend({
 
   handleAuthentication() {
     return new RSVP.Promise((resolve, reject) => {
-      get(this, "auth0").parseHash((err, authResult) => {
+      // https://github.com/auth0-community/ember-simple-auth-auth0/issues/67#issuecomment-312563014
+      // get(this, "auth0").parseHash((err, authResult) => {
+      get(this, "auth0").parseHash(window.location.hash, (err, authResult) => {
         if (authResult && authResult.accessToken && authResult.idToken) {
           this.setSession(authResult);
         } else if (err) {
@@ -35,9 +38,11 @@ export default Service.extend({
       });
     });
   },
+
   isAuthenticated: computed(function() {
     return isPresent(this.getSession().access_token) && this.isNotExpired();
   }).volatile(),
+  
   getSession() {
     return {
       access_token: localStorage.getItem("access_token"),
