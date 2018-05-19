@@ -12,9 +12,15 @@ module.exports = {
     'plugin:ember/recommended'
   ],
   env: {
-    browser: true
+    browser: true,
+    jquery: true
   },
   rules: {
+    eqeqeq: ["error", "always"],
+    indent: ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    quotes: ["error", "double"],
+    semi: ["error", "always"]
   },
   overrides: [
     // node files
