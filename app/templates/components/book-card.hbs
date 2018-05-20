@@ -1,10 +1,12 @@
 <div class="card book">
-  <img class="card-img-top" src="{{ book.cover }}" alt="{{ book.title }}">
-  <div class="card-body">
-    <h5 class="card-title">
-      <em>{{ book.title }}</em> <small>({{ book.year }})</small>
-    </h5>
-    <p class="card-text">{{ book.author }}</p>
+  <img class="card-img" src="{{ book.cover }}" alt="{{ book.title }}">
+  <div class="p-2 d-flex align-items-end card-img-overlay">
+    <div class="p-2" style="background-color: rgba(255, 255, 255, 0.7);">
+      <h5 class="card-title m-0 p-2">
+        <em>{{ book.title }}</em> <small>({{ book.year }})</small>
+      </h5>
+      <p class="card-text">{{ book.author }}</p>
+    </div>
   </div>
 </div>
 
