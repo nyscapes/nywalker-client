@@ -76,13 +76,13 @@ export default function() {
 
   this.get("/books", () => {
     return { "data": books, "meta": {
-        "copyright": "Copyright 2018 Moacir P. de Sá Pereira",
-        "license": "See http://github.com/nyscapes/nywalker-server",
-        "authors": [
-          "Moacir P. de Sá Pereira"
-        ]
-      }
+      "copyright": "Copyright 2018 Moacir P. de Sá Pereira",
+      "license": "See http://github.com/nyscapes/nywalker-server",
+      "authors": [
+        "Moacir P. de Sá Pereira"
+      ]
     }
+    };
   });
 
   this.get("/books/:id", function (db, request) {
