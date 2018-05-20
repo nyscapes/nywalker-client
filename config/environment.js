@@ -1,7 +1,5 @@
 "use strict";
 
-const AUTH_CONFIG = require("./auth0-variables");
-
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: "nywalker-client",
@@ -50,10 +48,10 @@ module.exports = function(environment) {
   }
 
   ENV.auth0 = {
-    clientID: AUTH_CONFIG.clientID,
-    domain: AUTH_CONFIG.domain,
-    callbackUrl: AUTH_CONFIG.callbackUrl,
-    audience: AUTH_CONFIG.apiUrl
+    clientID: process.env.AUTH_CONFIG_CLIENT_ID,
+    domain: process.env.AUTH_CONFIG_DOMAIN,
+    callbackUrl: process.env.AUTH_CONFIG_CALLBACK_URL,
+    audience: process.env.AUTH_CONFIG_API_URL
   };
 
   return ENV;

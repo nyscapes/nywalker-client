@@ -4,10 +4,9 @@ import Component from "@ember/component";
 
 export default Component.extend({
   // auth: service(),
-  actions: {
-    login() {
-      return true;
-      // get(this, "auth").login();
-    },
-  },
+  // actions: {
+  //   login() {
+  //     get(this, "auth").login();
+  //   },
+  // },
 });
