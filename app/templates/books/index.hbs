@@ -1,0 +1,6 @@
+<div class="card-columns col-6">
+  {{#each model as |book|}}
+    {{ book-card book=book }}
+  {{/each}}
+</div>
+{{outlet}}
