@@ -1,9 +1,9 @@
-# nywalker-client
+# NYWalker-Client
 
-An ember front end for the NYWalker Server
+[![Build Status](https://travis-ci.org/nyscapes/nywalker-client.svg)](https://travis-ci.org/nyscapes/nywalker-client) [![Maintainability](https://api.codeclimate.com/v1/badges/925eefce16858c986086/maintainability)](https://codeclimate.com/github/nyscapes/nywalker-client/maintainability) 
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+An ember front end for the [NYWalker
+Server](http://github.com/nyscapes/nywalker-server).
 
 ## Prerequisites
 
