@@ -1,0 +1,4 @@
+{{#leaflet-map lat=45 lng=0 zoom=5 class="map" as |layers|}}
+  {{layers.tile url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+  {{yield}}
+{{/leaflet-map}}

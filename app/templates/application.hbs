@@ -1,4 +1,8 @@
 {{ navigation-bar }}
-<div class="container">
-  {{outlet}}
+{{#big-map}}
+{{/big-map}}
+<div class="container"> 
+  <div class="card p-3" style="overflow-y: auto; max-height: 80vh; width: 50vw; position: absolute; top: 60px; z-index: 1000;">
+    {{ outlet }}
+  </div>
 </div>

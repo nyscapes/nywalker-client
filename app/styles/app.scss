@@ -1,2 +1,8 @@
 
 @import "ember-bootstrap/bootstrap";
+
+.map {
+  height: calc(100vh - 56px);
+  position: sticky;
+  top: 0;
+}
