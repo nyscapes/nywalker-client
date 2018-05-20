@@ -1,7 +1,8 @@
 /* global auth0 */
+// auth0 gets picked up in the webpage, but not in the tests
 import { computed, get } from "@ember/object";
 import Service from "@ember/service";
-import config from "../config/environment";
+import config from "nywalker-client/config/environment";
 // import RSVP from "rsvp";
 import { isPresent } from "@ember/utils";
 
