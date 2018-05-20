@@ -20,10 +20,10 @@ module.exports = {
   },
   rules: {
     eqeqeq: ["error", "always"],
-    indent: ["warn", 2],
-    "linebreak-style": ["warn", "unix"],
-    quotes: ["warn", "double"],
-    semi: ["warn", "always"]
+    indent: ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    quotes: ["error", "double"],
+    semi: ["error", "always"]
   },
   overrides: [
     // node files
