@@ -4,6 +4,9 @@ const EmberApp = require("ember-cli/lib/broccoli/ember-app");
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
+    nodeModulesToVendor: [
+      "node_modules/auth0-js/build",
+    ],
     "ember-bootstrap": {
       "bootstrapVersion": 4,
       "importBootstrapFont": false,
@@ -23,6 +26,8 @@ module.exports = function(defaults) {
   // modules that you would like to import into your application
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
+ 
+  app.import('vendor/auth0.js');
 
   return app.toTree();
 };
