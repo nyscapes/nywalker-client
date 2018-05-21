@@ -12,27 +12,29 @@ export default function() {
   this.get("/books", (schema) => {
     return schema.books.all();
   });
+
   this.get("/books/:id");
 
   this.get("/instances", (schema) => {
     return schema.instances.all();
   });
 
-  // this.get("/books/:id", function (db, request) {
-  //   return { data: books.find((book) => request.params.id === book.id) };
-  // });
+  this.get("/places", (schema) => {
+    return schema.places.all();
+  });
 
-
-
+  this.get("/nicknames", (schema) => {
+    return schema.nicknames.all();
+  });
 
   this.passthrough("http://api.geonames.org/**");
 
 }
-    
+
 /*
-    Shorthand cheatsheet:
-    this.post("/posts");
-    this.put("/posts/:id"); // or this.patch
-    this.del("/posts/:id");
-    http://www.ember-cli-mirage.com/docs/v0.3.x/shorthands/
-  */
+  Shorthand cheatsheet:
+  this.post("/posts");
+  this.patch("/posts/:id");
+  this.del("/posts/:id");
+  http://www.ember-cli-mirage.com/docs/v0.3.x/shorthands/
+*/
