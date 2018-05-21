@@ -1,4 +1,13 @@
-{{#leaflet-map lat=45 lng=0 zoom=5 class="map" as |layers|}}
-  {{layers.tile url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+{{#leaflet-map lat=40.7 lng=-74 zoom=7 class="map"}}
+  {{tile-layer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+
+  {{#each places as |p|}}
+    {{#marker-layer lat=p.lat lng=p.lon}}
+      {{#popup-layer}}
+      <h3>{{ p.name }}</h3>
+      {{/popup-layer}}
+    {{/marker-layer}}
+  {{/each}}
+
   {{yield}}
 {{/leaflet-map}}
