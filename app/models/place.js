@@ -1,5 +1,5 @@
 import DS from "ember-data";
-import { collect } from "@ember/object/computed";
+import { and, collect } from "@ember/object/computed";
 
 export default DS.Model.extend({
   name: DS.attr("string"),
@@ -20,6 +20,7 @@ export default DS.Model.extend({
   nicknames: DS.hasMany("nickname"),
   instances: DS.hasMany("instance"),
 
+  mappable: and("lat", "lon"),
   latLng: collect("lat", "lon")
 
 });
