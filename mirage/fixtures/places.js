@@ -1,5 +1,5 @@
 export default [{
-  id: 1,
+  id: "1",
   name: "New York City",
   slug: "new-york-city",
   confidence: "3",
@@ -7,7 +7,7 @@ export default [{
   lat: 40.71427,
   lon: -74.00597,
   instance_count: 10,
-  instanceIds: [1, 2, 3, 7]
+  instanceIds: ["1", "2", "3", "7"]
 },
 {
   id: 2,

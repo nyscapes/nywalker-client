@@ -1,5 +1,5 @@
 export default [{
-  "id": "1",
+  "id": 1,
   "slug": "let-the-great-world-spin-2009",
   "title": "Let the Great World Spin",
   "author": "Colum McCann",
@@ -11,10 +11,11 @@ export default [{
   "modified-on": null,
   "total-pages": 344,
   "instances-per-page": 2.27,
-  "instance-count": 781
+  "instance-count": 781,
+  instanceIds: [1, 2, 3, 4, 5, 6, 7]
 },
 {
-  "id": "2",
+  "id": 2,
   "slug": "the-age-of-innocence-1920",
   "title": "The Age of Innocence",
   "author": "Edith Wharton",
@@ -29,7 +30,7 @@ export default [{
   "instance-count": 663
 },
 {
-  "id": "10",
+  "id": 10,
   "slug": "the-crying-of-lot-49-1986-ed-dot-1965",
   "title": "The Crying of Lot 49 (1986 ed.)",
   "author": "Thomas Pynchon",
