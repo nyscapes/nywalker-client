@@ -1,7 +1,5 @@
 @import "ember-bootstrap/bootstrap";
 
-
-
 .map {
   height: 100vh; //calc(100vh - 56px);
   position: sticky;
@@ -12,4 +10,11 @@
   position: absolute;
   top: 0;
   z-index: 1000;
+}
+
+#outlet-card {
+  background-color: rgba(255,255,255,0.6);
+  overflow-y: auto; 
+  max-height: 80vh; 
+  width: 50vw;
 }
