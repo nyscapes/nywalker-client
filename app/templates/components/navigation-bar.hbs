@@ -1,13 +1,13 @@
 {{#bs-navbar position="sticky-top" type=(if inverse "inverse") fluid=fluid collapsed=collapsed onCollapse=(action (mut collapsed) true) onExpand=(action (mut collapsed) false) as |navbar|}}
-  <div class="navbar-header">
-    {{navbar.toggle}}
-    {{#link-to "index" class="navbar-brand"}}NYWalker{{/link-to}}
-  </div>
   {{#navbar.content}}
     {{#navbar.nav as |nav|}}
-      {{#nav.item}}{{#nav.link-to "about"}}About{{/nav.link-to}}{{/nav.item}}
+    {{#nav.item}}{{#nav.link-to "index"}}NYWalker{{/nav.link-to}}{{/nav.item}}
+    {{#nav.item}}{{#nav.link-to "books"}}{{fa-icon "book"}}{{/nav.link-to}}{{/nav.item}}
+    {{#nav.item}}{{#nav.link-to "places"}}{{fa-icon "map-pin"}}{{/nav.link-to}}{{/nav.item}}
+    {{#nav.item}}{{#nav.link-to "help"}}{{fa-icon "question-circle"}}{{/nav.link-to}}{{/nav.item}}
+    {{#nav.item}}{{#nav.link-to "about"}}{{fa-icon "info-circle"}}{{/nav.link-to}}{{/nav.item}}
       {{#nav.item}}
-        <a class="nav-link" {{action "login"}}>Login</a>
+      <a class="nav-link" {{action "login"}}>{{fa-icon "sign-in-alt"}}</a>
       {{/nav.item}}
     {{/navbar.nav}}
   {{/navbar.content}}

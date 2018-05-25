@@ -12,6 +12,8 @@ Router.map(function() {
   });
   this.route("about");
   this.route("protected");
+  this.route("places");
+  this.route("help");
 });
 
 export default Router;
