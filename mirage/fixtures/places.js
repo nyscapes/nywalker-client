@@ -30,5 +30,16 @@ export default [{
   lon: -73.94958,
   instance_count: 10,
   instanceIds: [6]
+},
+{
+  id: 4,
+  name: "Philadelphia",
+  slug: "philadelphia",
+  confidence: "3",
+  nickname_sentence: "Philly and stuff",
+  lat: 40.009,
+  lon: -75.1333,
+  instance_count: 20,
+  instanceIds: [8]
 }
 ];

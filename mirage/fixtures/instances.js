@@ -74,6 +74,17 @@ export default [{
   lon: -74.00597,
   placeId: 1,
   bookId: 1
+},
+{
+  id: 8,
+  page: 1,
+  sequence: 1,
+  text: "Philly",
+  place_name: "Philadelphia",
+  lat: 40.009,
+  lon: -75.1333,
+  placeId: 4,
+  bookId: 2
 }
 ];
 
