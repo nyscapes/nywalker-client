@@ -3,6 +3,7 @@ export default [{
   "slug": "let-the-great-world-spin-2009",
   "title": "Let the Great World Spin",
   "author": "Colum McCann",
+  "last-instance": 7,
   "isbn": "9780812973990",
   "year": 2009,
   "url": "http://books.google.com/books?id=_U8Cv5H-qkEC&dq=isbn:9780812973990&hl=&source=gbs_api",
@@ -12,6 +13,8 @@ export default [{
   "total-pages": 344,
   "instances-per-page": 2.27,
   "instance-count": 781,
+  "special-field": "Point of View",
+  "special-help-text": "Character point of view.",
   instanceIds: [1, 2, 3, 4, 5, 6, 7]
 },
 {
