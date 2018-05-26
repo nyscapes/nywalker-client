@@ -1,0 +1,8 @@
+<div class="clearfix">
+  <img id="book-info-image" src={{book.cover}} class="rounded float-left mr-3" alt="{{book.title}} cover">
+  <div id="book-info-text">
+    <h2>by {{book.author}}</h2>
+    <h3>{{book.instance_count}} instances, or {{book.instances_per_page}} per page</h3>
+    {{book-toolbar book=model}}
+  </div>
+</div>

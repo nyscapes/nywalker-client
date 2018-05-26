@@ -14,7 +14,11 @@
 
 #outlet-card {
   background-color: rgba(255,255,255,0.6);
-  overflow-y: auto; 
   max-height: 80vh; 
   width: 50vw;
 }
+
+#outlet-card-body {
+  overflow-y: scroll; 
+}
+

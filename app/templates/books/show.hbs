@@ -1,8 +1,7 @@
-<h2><em>{{model.title}}</em></h2>
-{{#link-to "instances.new"}}new instance{{/link-to}}
+{{book-info book=model}}
 
 {{outlet}}
 
-{{instances-list instances=model.instances}}
+{{instances-list id="instances-list" instances=model.instances}}
 
 
