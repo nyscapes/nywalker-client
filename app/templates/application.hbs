@@ -1,8 +1,11 @@
 <div id="above-map">
   {{ navigation-bar }}
   <div class="container"> 
-    <div id="outlet-card" class="card p-3 align-self-center">
-      {{ outlet }}
+    <div id="outlet-card" class="card border-dark align-self-center">
+      {{card-header}}
+      <div id="outlet-card-body" class="card-body collapse show text-dark">
+        {{ outlet }}
+      </div>
     </div>
   </div>
 </div>
