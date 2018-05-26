@@ -2,11 +2,13 @@ import Route from "@ember/routing/route";
 import { inject as service } from "@ember/service";
 
 export default Route.extend({
+  card: service(),
   map: service(),
   model(params) {
     return this.get("store").findRecord("book", params.book_id);
   },
   afterModel(model) {
+    this.set("card.header", `<em>${model.title}</em> (${model.year})`);
     // model.mappable_places comes with duplicates that don't get caught because they have a hidden ember component property. So.
     // NB: mappable places is based on *instances*, weirdly enough.
     const mappable_places = model.mappable_places.map( place => {
