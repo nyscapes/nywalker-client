@@ -2,12 +2,12 @@
   {{#navbar.content}}
     {{#navbar.nav as |nav|}}
     {{#nav.item}}{{#nav.link-to "index"}}NYWalker{{/nav.link-to}}{{/nav.item}}
-    {{#nav.item}}{{#nav.link-to "books"}}{{fa-icon "book"}}<span class="sr-only">Books</span>{{/nav.link-to}}{{/nav.item}}
-    {{#nav.item}}{{#nav.link-to "places"}}{{fa-icon "map-pin"}}<span class="sr-only">Places</span>{{/nav.link-to}}{{/nav.item}}
-    {{#nav.item}}{{#nav.link-to "help"}}{{fa-icon "question-circle"}}<span class="sr-only">Help</span>{{/nav.link-to}}{{/nav.item}}
-    {{#nav.item}}{{#nav.link-to "about"}}{{fa-icon "info-circle"}}<span class="sr-only">About</span>{{/nav.link-to}}{{/nav.item}}
+    {{#nav.item}}{{#nav.link-to "books" (html-attributes aria-label="List of Books")}}{{fa-icon "book" }}{{/nav.link-to}}{{/nav.item}}
+    {{#nav.item}}{{#nav.link-to "places" (html-attributes aria-label="List of Places")}}{{fa-icon "map-pin"}}{{/nav.link-to}}{{/nav.item}}
+    {{#nav.item}}{{#nav.link-to "help" (html-attributes aria-label="Help Page")}}{{fa-icon "question-circle"}}{{/nav.link-to}}{{/nav.item}}
+    {{#nav.item}}{{#nav.link-to "about" (html-attributes aria-label="About NYWalker")}}{{fa-icon "info-circle"}}{{/nav.link-to}}{{/nav.item}}
       {{#nav.item}}
-      <a class="nav-link" {{action "login"}}>{{fa-icon "sign-in-alt"}}<span class="sr-only">Login</span></a>
+      <a class="nav-link" {{action "login"}} aria-label="Login to NYWalker">{{fa-icon "sign-in-alt"}}</a>
       {{/nav.item}}
     {{/navbar.nav}}
   {{/navbar.content}}
