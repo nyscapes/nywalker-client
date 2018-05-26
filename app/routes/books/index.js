@@ -6,7 +6,7 @@ export default Route.extend({
   model() {
     return this.get("store").findAll("book");
   },
-  afterModel(model) {
+  afterModel() {
     this.set("card.header", "NYWalker - List of Books");
   },
 });

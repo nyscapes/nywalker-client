@@ -12,7 +12,7 @@ export default Route.extend({
       instance: this.get("store").createRecord("instance")
     });
   },
-  afterModel(model) {
+  afterModel() {
     const header = this.get("card.header");
     this.set("card.header", header + " — Add Instance");
   }
