@@ -1,4 +1,4 @@
-{{#bs-navbar position="sticky-top" type=(if inverse "inverse") fluid=fluid collapsed=collapsed onCollapse=(action (mut collapsed) true) onExpand=(action (mut collapsed) false) as |navbar|}}
+{{#bs-navbar position="sticky-top" type=(if inverse "inverse") fluid=fluid toggleBreakpoint=null as |navbar|}}
   {{#navbar.content}}
     {{#navbar.nav as |nav|}}
     {{#nav.item}}{{#nav.link-to "index"}}NYWalker{{/nav.link-to}}{{/nav.item}}
@@ -7,7 +7,9 @@
     {{#nav.item}}{{#nav.link-to "help" (html-attributes aria-label="Help Page")}}{{fa-icon "question-circle"}}{{/nav.link-to}}{{/nav.item}}
     {{#nav.item}}{{#nav.link-to "about" (html-attributes aria-label="About NYWalker")}}{{fa-icon "info-circle"}}{{/nav.link-to}}{{/nav.item}}
       {{#nav.item}}
-      <a class="nav-link" {{action "login"}} aria-label="Login to NYWalker">{{fa-icon "sign-in-alt"}}</a>
+      <!-- {{!#nav.item onClick=(action "login")}} -->
+      {{#nav.link-to "index" (html-attributes aria-label="Login to NYWalker")}}{{fa-icon "sign-in-alt"}}{{/nav.link-to}}
+      <!-- <a class="nav-link" {{action "login"}} aria-label="Login to NYWalker">{{fa-icon "sign-in-alt"}}</a> -->
       {{/nav.item}}
     {{/navbar.nav}}
   {{/navbar.content}}
