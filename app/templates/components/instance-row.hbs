@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-2 d-inline-flex justify-content-between pl-0">
+    {{fa-icon "eye"}}
+    <a href="#" data-target="#instance-dropdown-{{instance.id}}" 
+      data-toggle="collapse" role="button" 
+      aria-expanded="false" aria-controls="instance-dropdown-{{instance.id}}">
+        {{fa-icon "pencil-alt"}}
+      </a>
+    {{fa-icon "trash-alt"}}
+  </div>
+  <div class="col-2">
+    {{instance.page}}:{{instance.sequence}}
+  </div>
+  <div class="col-8 pl-0">
+    {{instance.text}}
+  </div>
+</div>
+<div id="instance-dropdown-{{instance.id}}" class="collapse">
+  <h4> Form below.</h4>
+  {{ instance-form instance=instance }}
+</div>
