@@ -9,16 +9,28 @@
 #above-map {
   position: absolute;
   top: 0;
+  width: 100vw;
   z-index: 1000;
 }
 
 #outlet-card {
   background-color: rgba(255,255,255,0.6);
   max-height: 80vh; 
-  width: 50vw;
 }
 
 #outlet-card-body {
   overflow-y: scroll; 
+}
+
+@media (min-width: 768px) {
+  #outlet-card {
+    width: 75vw;
+  }
+}
+
+@media (min-width: 992px) {
+  #outlet-card {
+    width: 50vw;
+  }
 }
 
