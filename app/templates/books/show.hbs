@@ -1,4 +1,7 @@
 <h2><em>{{model.title}}</em></h2>
+{{#link-to "instances.new"}}new instance{{/link-to}}
+
+{{outlet}}
 
 <ul>
 {{#each model.instances as |instance|}}
@@ -7,4 +10,3 @@
 </ul>
 
 
-{{outlet}}

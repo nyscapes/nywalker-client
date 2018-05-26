@@ -1,0 +1,4 @@
+<h4>Cr. new ins for {{model.book.title}}</h4>
+{{instance-form instance=model.instance book=model.book}}
+{{!instance-form book=book prefill=lastInstance submitAction=(action "createInstance")}}
+{{outlet}}

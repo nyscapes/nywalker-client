@@ -1,0 +1,25 @@
+<form {{action "save" instance on="submit"}}>
+  <label>Page: {{input name="page" value=instance.page}}</label>
+  <label>Sequence: {{input name="sequence" value=instance.sequence}}</label>
+  <label>Place Name in Text: {{input name="text" value=instance.text}}</label>
+  <label>Note: {{textarea name="note" value=instance.note}}</label>
+  <input type="submit" value="Save">
+</form>
+
+
+<!-- {{#bs-form model=model  onSubmit=(action submitAction) as |form|}} -->
+<!-- <h3>{{! book.title}}{{prefill}}</h3> -->
+
+<!--   {{!debugger}} -->
+
+<!--   {{form.element controlType="text" label="Place" placeholder="1" property="place"}} -->
+<!--   {{form.element controlType="number" label="Page" placeholder="1" property="page"}} -->
+<!--   {{form.element controlType="number" label="Sequence" placeholder="1" property="sequence"}} -->
+<!--   {{form.element controlType="text" label="Place name in text" placeholder="1" property="text"}} -->
+<!--   {{#if book.special_field}} -->
+<!--   {{form.element controlType="text" label=book.special_field placeholder="1" property="special" helpText=book.special_help_text}} -->
+<!--   {{/if}} -->
+<!--   {{form.element controlType="textarea" label="Note" placeholder="1" property="text"}} -->
+<!--   {{bs-button defaultText="Submit" type="primary" buttonType="submit"}} -->
+<!-- {{yield}} -->
+<!-- {{/bs-form}} -->
