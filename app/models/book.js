@@ -18,14 +18,7 @@ export default DS.Model.extend({
   special_field: DS.attr("string"),
   special_help_text: DS.attr("string"),
   last_instance: DS.attr("string"),
+  mappable_places: DS.attr("string"),
 
   instances: DS.hasMany("instance"),
-
-  mappable_places: computed("instances", function(){
-    return this.get("instances").map( instance => {
-      if(instance.mappable){
-        return { name: instance.place_name, lat: instance.lat, lon: instance.lon };
-      }
-    }).compact();
-  })
 });

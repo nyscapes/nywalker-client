@@ -16,9 +16,10 @@ export default [{
   "special-field": "Point of View",
   "special-help-text": "Character point of view.",
   instanceIds: [1, 2, 3, 4, 5, 6, 7],
-  "mappable-places": [
+  "mappable-places": JSON.stringify([
     {
       "id": 1,
+      slug: "new-york-city",
       lat: 40.71427,
       lon: -74.00597,
       "count": 4,
@@ -30,18 +31,8 @@ export default [{
       ]
     },
     {
-      "id": 2,
-      lat: null,
-      lon: null,
-      "count": 2,
-      "name": "Museum of Minotaurs",
-      "instance_count_by_name": [
-        ["Museum of Minotaurs", 1],
-        ["The Museum", 1]
-      ]
-    },
-    {
       "id": 3,
+      slug: "brooklyn",
       lat: 40.6501,
       lon: -73.94958,
       "count": 1,
@@ -50,7 +41,7 @@ export default [{
         ["BKN", 1]
       ]
     }
-  ]
+  ])
 },
 {
   "id": 2,
