@@ -1,25 +1,34 @@
-{{#bs-form model=instance onSubmit=(action "save" instance) as |form|}}
+<form {{action "save" instance on="submit"}}>
   {{!form.element controlType="text" label="Place" placeholder="1" property="place" size="sm"}}
   <div class="row">
-    <div class="col-2">
-      {{form.element controlType="number" label="Page" placeholder=placeholder.page property="page" size="sm"}}
+    <div class="col-2 form-group">
+      <label for="{{elementId}}-page">Page</label>
+      {{input name="page" id=(concat elementId "-page") value=instance.page type="number" class="form-control form-control-sm"}}
+      <!-- <input type="number" class="form-control form-control-sm" value={{instance.page}}> -->
     </div>
-    <div class="col-2">
-      {{form.element controlType="number" label="Sequence" placeholder=placeholder.sequence property="sequence" size="sm"}}
+    <div class="col-2 form-group">
+      <label for="{{elementId}}-sequence">Sequence</label>
+      {{input name="sequence" id=(concat elementId "-sequence") value=instance.sequence type="number" class="form-control form-control-sm"}}
     </div>
-    <div class="col-8">
-      {{form.element controlType="text" label="Place name in text" placeholder="1" property="text" size="sm"}}
+    <div class="col-8 form-group">
+      <label for="{{elementId}}-text">Place name in text</label>
+      {{input name="text" id=(concat elementId "-text") value=instance.text type="text" class="form-control form-control-sm"}}
     </div>
   </div>
   {{#if book.special_field}}
-    {{form.element controlType="text" label=book.special_field placeholder="1" property="special" helpText=book.special_help_text size="sm"}}
+    <div class="form-group">
+      <label for="{{elementId}}-special">{{book.special_field}}</label>
+      {{input name="special" id=(concat elementId "-special") value=instance.special type="text" class="form-control form-control-sm"}}
+      <small class="form-text text-muted">{{book.special_help_text}}</small>
+    </div>
   {{/if}}
   <div class="row">
-    <div class="col-9">
-      {{form.element controlType="textarea" label="Note" placeholder="1" property="note" size="sm"}}
+    <div class="form-group col-9">
+      <label for="{{elementId}}-note">Note</label>
+      {{textarea id=(concat elementId "-note") class="form-control form-control-sm" value=instance.note placeholder="Example"}}
     </div>
     <div class="col-3 d-flex align-items-end">
-      {{bs-button defaultText="Save" class="mb-3" type="primary" buttonType="submit"}}
+      <button class="btn btn-primary mb-3" type="submit">Save</button>
     </div>
   </div>
-{{/bs-form}}
+</form>
