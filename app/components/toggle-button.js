@@ -15,12 +15,14 @@ export default Component.extend({
   buttonSize: null,
   active: false,
   didInsertElement() { 
+    const btnClass = this.get("buttonClass");
     const btnSize = this.get("buttonSize");
     if(btnSize){
       this.set("btnsize", `btn-${this.get("buttonSize")}`);
     }
-    this.set("btnclass", `btn-${this.get("buttonClass")}`);
-
+    if(btnClass){
+      this.set("btnclass", `btn-${this.get("buttonClass")}`);
+    }
   },
   click() { this.toggleProperty("active"); }
 });
