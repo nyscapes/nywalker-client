@@ -1,9 +1,7 @@
 <div class="btn-group btn-group-sm" role="group" aria-label="Book buttons">
-  <button class="btn btn-primary" type="button"
-    data-target="#instances-list" data-toggle="collapse" 
-    aria-expanded="false" aria-controls="instances-list">
-    Show instances
-  </button>
+  {{#toggle-button buttonClass="primary" type="button" data-target="#instances-list" data-toggle="collapse" id="instances-list-button" aria-expanded="false" aria-controls="instances-list"}}
+  Show instances
+  {{/toggle-button}}
   {{#link-to "instances.new" class="btn btn-primary" tagName="button"}}New instance{{/link-to}}
   <button class="btn btn-primary" type="button">
     Download geodata
