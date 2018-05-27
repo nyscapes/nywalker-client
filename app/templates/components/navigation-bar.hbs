@@ -1,17 +1,8 @@
-{{#bs-navbar position="sticky-top" type=(if inverse "inverse") fluid=fluid toggleBreakpoint=null as |navbar|}}
-  {{#navbar.content}}
-    {{#navbar.nav as |nav|}}
-    {{#nav.item}}{{#nav.link-to "index"}}NYWalker{{/nav.link-to}}{{/nav.item}}
-    {{#nav.item}}{{#nav.link-to "books" (html-attributes aria-label="List of Books")}}{{fa-icon "book" }}{{/nav.link-to}}{{/nav.item}}
-    {{#nav.item}}{{#nav.link-to "places" (html-attributes aria-label="List of Places")}}{{fa-icon "map-pin"}}{{/nav.link-to}}{{/nav.item}}
-    {{#nav.item}}{{#nav.link-to "help" (html-attributes aria-label="Help Page")}}{{fa-icon "question-circle"}}{{/nav.link-to}}{{/nav.item}}
-    {{#nav.item}}{{#nav.link-to "about" (html-attributes aria-label="About NYWalker")}}{{fa-icon "info-circle"}}{{/nav.link-to}}{{/nav.item}}
-      {{#nav.item}}
-      <!-- {{!#nav.item onClick=(action "login")}} -->
-      {{#nav.link-to "index" (html-attributes aria-label="Login to NYWalker")}}{{fa-icon "sign-in-alt"}}{{/nav.link-to}}
-      <!-- <a class="nav-link" {{action "login"}} aria-label="Login to NYWalker">{{fa-icon "sign-in-alt"}}</a> -->
-      {{/nav.item}}
-    {{/navbar.nav}}
-  {{/navbar.content}}
-{{/bs-navbar}}
-
+<nav class="nav nav-pills m-3">
+{{#link-to "index" class="nav-item nav-link"}}NYWalker{{/link-to}}
+{{#link-to "books" (html-attributes class="nav-item nav-link" aria-label="List of Books")}}{{fa-icon "book" }}{{/link-to}}
+{{#link-to "places" (html-attributes class="nav-item nav-link" aria-label="List of Places")}}{{fa-icon "map-pin"}}{{/link-to}}
+{{#link-to "help" (html-attributes class="nav-item nav-link" aria-label="Help Page")}}{{fa-icon "question-circle"}}{{/link-to}}
+{{#link-to "about" (html-attributes class="nav-item nav-link" aria-label="About NYWalker")}}{{fa-icon "info-circle"}}{{/link-to}}
+{{#link-to "index" (html-attributes class="nav-item nav-link" aria-label="Login to NYWalker")}}{{fa-icon "sign-in-alt"}}{{/link-to}}
+</nav>
