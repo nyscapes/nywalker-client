@@ -15,7 +15,42 @@ export default [{
   "instance-count": 781,
   "special-field": "Point of View",
   "special-help-text": "Character point of view.",
-  instanceIds: [1, 2, 3, 4, 5, 6, 7]
+  instanceIds: [1, 2, 3, 4, 5, 6, 7],
+  "mappable-places": [
+    {
+      "id": 1,
+      lat: 40.71427,
+      lon: -74.00597,
+      "count": 4,
+      "name": "New York City",
+      "instance_count_by_name": [
+        ["ENWHYFFINSEE", 1],
+        ["New Yurk City", 1],
+        ["The Citeee", 2]
+      ]
+    },
+    {
+      "id": 2,
+      lat: null,
+      lon: null,
+      "count": 2,
+      "name": "Museum of Minotaurs",
+      "instance_count_by_name": [
+        ["Museum of Minotaurs", 1],
+        ["The Museum", 1]
+      ]
+    },
+    {
+      "id": 3,
+      lat: 40.6501,
+      lon: -73.94958,
+      "count": 1,
+      "name": "Brooklyn",
+      "instance_count_by_name": [
+        ["BKN", 1]
+      ]
+    }
+  ]
 },
 {
   "id": 2,
