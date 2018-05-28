@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/nyscapes/nywalker-client.svg)](https://travis-ci.org/nyscapes/nywalker-client) [![Maintainability](https://api.codeclimate.com/v1/badges/925eefce16858c986086/maintainability)](https://codeclimate.com/github/nyscapes/nywalker-client/maintainability) 
 
-An ember front end for the [NYWalker
+An [Ember](http://emberjs.com) front end for the [NYWalker
 Server](http://github.com/nyscapes/nywalker-server).
 
 ## Prerequisites
