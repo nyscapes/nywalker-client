@@ -1,5 +1,4 @@
 import DS from "ember-data";
-import { computed } from "@ember/object";
 // import EmberArray from "@ember/array";
 
 export default DS.Model.extend({
