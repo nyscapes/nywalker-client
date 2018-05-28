@@ -29,7 +29,13 @@
     </div>
     <div class="col-3 d-flex align-items-end">
       {{#unless readonly}}
-        <button class="btn btn-primary mb-3" type="submit">Save</button>
+        <button class="btn btn-primary mb-3" type="submit">
+          {{#if instance.isNew}}
+            Create
+          {{else}}
+            Update
+          {{/if}}
+        </button>
       {{/unless}}
     </div>
   </div>
